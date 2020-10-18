@@ -49,20 +49,14 @@ class RaspberryPiPicoBackendConfigPage(BareMetalMicroPythonConfigPage):
         ui_utils.show_dialog(dlg)
 
 class PicoFlashingDialog(Uf2FlashingDialog):
-    def get_missing_device_instructions(self) -> Optional[str]:
+    def get_instructions(self) -> Optional[str]:
         return (
-            "This dialog allows you to install or update MicroPython on your Pico.\n"
+            "This dialog allows you to install or update MicroPython firmware on your Pico.\n"
             "\n"
-            "Plug in your Pico while holding the BOOTSEL button and wait until device information appears.\n"
-            "If nothing happes in 20 seconds then unplug and try again."
-        )
-
-    def get_bootloader_mode_instructions(self) -> Optional[str]:
-        return (
-            "Your Pico is in the bootloader mode. In this mode you can install or update MicroPython.\n"
-            "\n"
-            "NB! Installing a new firmware will erase all files you may have on your Pico!\n"
-            "Make sure you have important files backed up!"
+            "1. Plug in your Pico while holding the BOOTSEL button.\n"
+            "2. Wait until device information appears.\n"
+            "3. Click 'Install' and wait for some seconds until done.\n"
+            "4. Close the dialog and start programming!"
         )
 
     def _get_release_info_url(self):
@@ -84,6 +78,8 @@ class PicoFlashingDialog(Uf2FlashingDialog):
     def get_title(self):
         return "Install MicroPython firmware for Raspberry Pi Pico"
 
+    def _get_vid_pids_to_wait_for(self):
+        return RaspberryPiPicoBackendProxy.get_known_usb_vids_pids()
 
 def load_plugin():
     add_micropython_backend(
