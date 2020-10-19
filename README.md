@@ -4,7 +4,7 @@ Pico support for the Thonny IDE
 Requires at least Thonny 3.3.0b6 (released at Oct 19th).
 
 ## Current state
-* Aivar is happy with the new UI (backend switcher and firmware flasher)
+* ~~Aivar is happy with the new UI (backend switcher and firmware flasher)~~ The firmware flashing dialog will get some tweaks.
 * The general part of MicroPython support still needs some tweaks (this is being dealt with at https://github.com/thonny/thonny) 
 
 ### TODO
