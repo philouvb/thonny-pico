@@ -1,7 +1,7 @@
 # thonny-pico
 Pico support for the Thonny IDE
 
-Requires at least Thonny 3.3.0b5 (released at Oct 19th).
+Requires at least Thonny 3.3.0b6 (released at Oct 19th).
 
 ## Current state
 * Aivar is happy with the new UI (backend switcher and firmware flasher)
@@ -37,7 +37,7 @@ thonny
 
 ## Back-end switcher
 
-This is new feature in Thonny 3.3b5. Previously the user could switch interpreters from "Run => Select interpreter". 
+This is new feature in Thonny 3.3b6. Previously the user could switch interpreters from "Run => Select interpreter". 
 The problem is that the menu is not visible in simple mode and Thonny didn't have good place to display the description
 of the current interpreter.
 

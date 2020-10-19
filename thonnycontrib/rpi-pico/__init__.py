@@ -5,8 +5,7 @@ from thonny import ui_utils, get_shell, get_workbench
 from thonny.misc_utils import list_volumes
 from thonny.plugins.micropython import (
     BareMetalMicroPythonProxy,
-    add_micropython_backend,
-    BareMetalMicroPythonConfigPage,
+    add_micropython_backend, BareMetalMicroPythonConfigPage,
 )
 from thonny.plugins.micropython.uf2dialog import Uf2FlashingDialog
 from thonny.ui_utils import show_dialog
@@ -90,3 +89,11 @@ def load_plugin():
         bare_metal=True,
         sort_key="32",
     )
+
+    # Don't consider Pico in generic backends
+    # The main reason is to reduce the number of items in the backend switcher menu
+    import thonny.plugins.circuitpython
+    import thonny.plugins.micropython
+    thonny.plugins.circuitpython.VIDS_PIDS_TO_AVOID.update(RaspberryPiPicoBackendProxy.get_known_usb_vids_pids())
+    thonny.plugins.micropython.VIDS_PIDS_TO_AVOID_IN_GENERIC_BACKEND.update(
+        RaspberryPiPicoBackendProxy.get_known_usb_vids_pids())
