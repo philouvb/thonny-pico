@@ -50,12 +50,14 @@ class RaspberryPiPicoBackendConfigPage(BareMetalMicroPythonConfigPage):
 class PicoFlashingDialog(Uf2FlashingDialog):
     def get_instructions(self) -> Optional[str]:
         return (
-            "This dialog allows you to install or update MicroPython firmware on your Pico.\n"
+            "Here you can install or update MicroPython firmware on Raspberry Pi Pico.\n"
             "\n"
             "1. Plug in your Pico while holding the BOOTSEL button.\n"
             "2. Wait until device information appears.\n"
-            "3. Click 'Install' and wait for some seconds until done.\n"
-            "4. Close the dialog and start programming!"
+            "3. Click 'Install'.\n"
+            "\n"
+            "When the process finishes, your Pico will be in the normal mode with the\n"
+            "latest MicroPython waiting for you. Close the dialog and start programming!"
         )
 
     def _get_release_info_url(self):
