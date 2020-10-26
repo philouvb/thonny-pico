@@ -57,8 +57,8 @@ class PicoFlashingDialog(Uf2FlashingDialog):
             "2. Wait until device information appears.\n"
             "3. Click 'Install'.\n"
             "\n"
-            "When the process finishes, your Pico will be in the normal mode with the\n"
-            "latest MicroPython waiting for you. Close the dialog and start programming!"
+            "When the process finishes, your Pico will be running the latest version of\n"
+            "MicroPython. Close the dialog and start programming!"
         )
 
     def _get_release_info_url(self):
