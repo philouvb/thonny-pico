@@ -22,12 +22,13 @@ class RaspberryPiPicoBackendProxy(BareMetalMicroPythonProxy):
 
     @property
     def known_usb_vids_pids(self):
-        # TODO: get rid of this
-        return {(0xF055, 0x9802)}
+        # Required for backward compatibility
+        return RaspberryPiPicoBackendProxy.get_known_usb_vids_pids()
 
     @classmethod
     def get_known_usb_vids_pids(cls):
-        return {(0xF055, 0x9802)}
+        # TODO: first pair is temporary
+        return {(0xF055, 0x9802), (0x2E8A, 0x0005)}
 
     @classmethod
     def device_is_present_in_bootloader_mode(cls):
