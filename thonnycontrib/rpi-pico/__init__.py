@@ -91,6 +91,8 @@ def load_plugin():
         RaspberryPiPicoBackendConfigPage,
         bare_metal=True,
         sort_key="32",
+        validate_time=False,
+        sync_time=False
     )
 
     # Don't consider Pico in generic backends
