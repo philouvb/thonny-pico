@@ -5,12 +5,18 @@ Requires at least Thonny 3.3.0b6 (released at Oct 19th).
 
 ## Current state
 * Aivar is happy with the new UI (backend switcher and firmware flasher).
-* The under-the-hood part of MicroPython support still needs some testing (this is being dealt with at https://github.com/thonny/thonny) 
 
 ### TODO
 * Add Pico-specific MicroPython API stubs to support code-completion
 
-## Overview of the usage
+## Easy installation
+* Install Thonny+Python bundle from https://github.com/thonny/thonny/releases/tag/v3.3.0
+* Download Pico as plug-in: https://github.com/raspberrypi/thonny-pico/releases/download/v0.1-post/thonny_rpi_pico-0.1-py3-none-any.whl
+* Start Thonny and go to "Tools => Manage plug-ins"
+* Click the link under "Install from local file" and select the whl-file.
+* When done, restart Thonny.
+
+## Overview of the advanced usage
 
 * pip-install Thonny pre-release into a virtual environment (see below for Linux example)
 * clone this repository into a local directory and add it to PYTHONPATH environment variable
