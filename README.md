@@ -10,16 +10,21 @@ Requires at least Thonny 3.3.0b6 (released at Oct 19th).
 * Add Pico-specific MicroPython API stubs to support code-completion
 
 ## Easy installation
+
+NB! Following works for Windows, macOS and Linux on x86_64 and i686 (binaries are published only for those
+platforms). On Raspberry you need to use pip (see next section) until Thonny 3.3 gets published
+in Raspberry's apt repository. 
+
 * Install Thonny+Python bundle from https://github.com/thonny/thonny/releases/tag/v3.3.0
 * Download Pico back-end as plug-in: https://github.com/raspberrypi/thonny-pico/releases/download/v0.1-post/thonny_rpi_pico-0.1-py3-none-any.whl
 * Start Thonny and go to "Tools => Manage plug-ins"
 * Click the link under "Install from local file" and select the whl-file.
 * When done, restart Thonny.
 
-## Overview of the advanced usage
+## Overview of the pip-based usage
 
 * pip-install Thonny pre-release into a virtual environment (see below for Linux example)
-* clone this repository into a local directory and add it to PYTHONPATH environment variable
+* clone this repository into a local directory and add it to PYTHONPATH environment variable. Alternatively use "Tools => Manage plug-ins" as described in the previous section.
 * run Thonny
 * Plug in Pico (either with or without holding BOOTSEL)
 * If you held BOOTSEL, wait until OS mounts the device
