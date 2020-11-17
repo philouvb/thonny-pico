@@ -12,8 +12,7 @@ Requires at least Thonny 3.3.0b6 (released at Oct 19th).
 ## Easy installation
 
 NB! Following works for Windows, macOS and Linux on x86_64 and i686 (binaries are published only for those
-platforms). On Raspberry you need to use pip (see next section) until Thonny 3.3 gets published
-in Raspberry's apt repository. 
+platforms). On Raspberry you need to use `apt update` and `apt upgrade` to get recently published 3.3.0 or pip (see next section) if you need a version which is not yet in RPi's apt repository. 
 
 * Install Thonny+Python bundle from https://github.com/thonny/thonny/releases/tag/v3.3.0
 * Download Pico back-end as plug-in: https://github.com/raspberrypi/thonny-pico/releases/download/v0.1-post/thonny_rpi_pico-0.1-py3-none-any.whl
