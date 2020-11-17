@@ -34,6 +34,9 @@ class RaspberryPiPicoBackendProxy(BareMetalMicroPythonProxy):
     def device_is_present_in_bootloader_mode(cls):
         return bool(PicoFlashingDialog.get_possible_targets())
 
+    def get_node_label(self):
+        return "Raspberry Pi Pico"
+
     def _propose_install_firmware(self):
         dlg = PicoFlashingDialog(get_workbench())
         show_dialog(dlg)
