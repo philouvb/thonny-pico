@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup (
         name="thonny-rpi-pico",
-        version="0.1",
+        version="0.2",
         description="PRIVATE! Support for RPi Pico (will be merged into Thonny later)",
         url="https://github.com/raspberrypi/thonny-pico/",
         author="Aivar Annamaa",
