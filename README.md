@@ -12,10 +12,10 @@ Requires at least Thonny 3.3.0b6 (released at Oct 19th).
 ## Easy installation
 
 NB! Following works for Windows, macOS and Linux on x86_64 and i686 (binaries are published only for those
-platforms). On Raspberry you need to use `apt update` and `apt upgrade` to get recently published 3.3.0 or pip (see next section) if you need a version which is not yet in RPi's apt repository. 
+platforms). On Raspberry you need to use `apt update` and `apt upgrade` to get 3.3.0 or pip (see next section) if you need a version which is not yet in RPi's apt repository. 
 
-* Install Thonny+Python bundle from https://github.com/thonny/thonny/releases/tag/v3.3.0
-* Download Pico back-end as plug-in: https://github.com/raspberrypi/thonny-pico/releases/download/v0.1-post/thonny_rpi_pico-0.1-py3-none-any.whl
+* Install Thonny+Python bundle from https://github.com/thonny/thonny/releases/tag/v3.3.1
+* Download Pico back-end as plug-in: https://github.com/raspberrypi/thonny-pico/releases/download/v0.2/thonny_rpi_pico-0.2-py3-none-any.whl
 * Start Thonny and go to "Tools => Manage plug-ins"
 * Click the link under "Install from local file" and select the whl-file.
 * When done, restart Thonny.
