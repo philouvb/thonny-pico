@@ -65,10 +65,10 @@ class PicoFlashingDialog(Uf2FlashingDialog):
         )
 
     def _get_release_info_url(self):
-        return "https://api.github.com/repos/raspberrypi/micropython/releases/latest"
+        return "https://thonny.org/45624345807/index.json"
 
     def _get_fallback_release_info_url(self):
-        return "https://thonny.org/45624345807/index.json"
+        return "https://api.github.com/repos/raspberrypi/micropython/releases/latest"
 
     def _is_suitable_asset(self, asset, model_id):
         if not asset["name"].endswith(".uf2") or "micropython" not in asset["name"].lower():
